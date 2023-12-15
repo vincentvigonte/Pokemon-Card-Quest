@@ -12,7 +12,7 @@ urlpatterns = [
     path('pokemon_card/add', PokemonCardCreateView.as_view(), name='pokemon-card-add'),
     path('pokemon_card/<pk>', PokemonCardUpdateView.as_view(), name='pokemon-card-update'),
     path('pokemon_card/<pk>/delete', PokemonCardDeleteView.as_view(), name='pokemon-card-delete'),
-    
+
     path('collection', CollectionList.as_view(), name='collection'),
     path('collection/add', CollectionCreateView.as_view(), name='collection-add'),
     path('collection/<pk>', CollectionUpdateView.as_view(), name='collection-update'),
