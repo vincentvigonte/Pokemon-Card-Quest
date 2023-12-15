@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from django.views.generic.list import ListView
-from .forms import TrainerForm, PokemonCard, Collection 
+from .forms import TrainerForm, PokemonCardForm, CollectionForm 
 from .models import PokemonCard, Trainer, Collection
 from django.urls import reverse_lazy
 
@@ -49,21 +49,21 @@ class PokemonCardList(ListView):
     
 class PokemonCardCreateView(CreateView):
     model = PokemonCard
-    form_class = PokemonCardList
+    form_class = PokemonCardForm
     template_name = 'pokemon_card_add.html'
     success_url = reverse_lazy('pokemon-card')
     
 
 class PokemonCardUpdateView(UpdateView):
     model = PokemonCard
-    form_class = PokemonCardList
+    form_class = PokemonCardForm
     template_name = 'pokemon_card_edit.html'
     success_url = reverse_lazy('pokemon-card')
     
 
 class PokemonCardDeleteView(DeleteView):
     model = PokemonCard
-    form_class = PokemonCardList
+    form_class = PokemonCardForm
     template_name = 'pokemon_card_del.html'
     success_url = reverse_lazy('pokemon-card')
     
@@ -75,20 +75,20 @@ class CollectionList(ListView):
 
 class CollectionCreateView(CreateView):
     model = Collection
-    form_class = CollectionList
+    form_class = CollectionForm
     template_name = 'collection_add.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')
     
 
 class CollectionUpdateView(UpdateView):
     model = Collection
-    form_class = CollectionList
+    form_class = CollectionForm
     template_name = 'collection_edit.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')
     
 
 class CollectionDeleteView(DeleteView):
     model = Collection
-    form_class = CollectionList
+    form_class = CollectionForm
     template_name = 'collection_del.html'
-    success_url = reverse_lazy('collection-list')
+    success_url = reverse_lazy('collection')
