@@ -16,4 +16,4 @@ Make sure you have Python installed on your system. You can download it from [py
 
 # Installation Steps
 1. Clone this repository to your local machine:
-https://github.com/vincentvigonte/Pokemon-Card-Quest-.git
+https://github.com/vincentvigonte/Pokemon-Card-Quest.git
